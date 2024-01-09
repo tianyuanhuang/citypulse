@@ -1,0 +1,41 @@
+output_root: './dinov2_gsv_test_output'
+log_dir: "./dinov2_gsv_test_output"
+experiment_name: "exp0_finetune_dinov2"
+dataset_name: "CityPulse"
+mode: ~
+checkpoint: ~ # checkpoint for finetuned model, use this parameter for testting
+
+# loader
+source_idx: '/YOUR/DATA/INDEX'
+num_workers: 8
+batch_size: 16
+val_batch_size: 16
+scale: 1 # How many data are used to finetune the model
+
+# model
+finetune: True
+model: DINOv2 # {ResNet101, DINO, CLIP, StreetBYOL, StreetMAE, DINOv2}
+input_size: 224
+feature_dim: 768
+ckpt: ~ # checkpoint for pretrained model
+dino_patch_size: 14 # {14, 16, ...}
+dino_feat_type: "feat" # {feat, KK}
+model_type: "vitb"  # {vit_base, ViT-B, vitb}
+pretrained_weights: ~ # for dino featurizer
+# dropout: True
+
+# optimize & trainer
+net_lr: 1e-5
+max_epochs: 500
+patience: 30
+gradient_clip_val: 0.5
+
+# log
+# val_freq: 50
+scalar_log_freq: 5
+n_imgs: 5
+
+hydra:
+  run:
+    dir: "."
+  output_subdir: ~
