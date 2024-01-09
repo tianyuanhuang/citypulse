@@ -3,7 +3,7 @@ log_dir: "./dinov2_gsv_test_output"
 experiment_name: "exp0_finetune_dinov2"
 dataset_name: "CityPulse"
 mode: ~
-checkpoint: ~ # checkpoint for finetuned model, use this parameter for testting
+checkpoint: ~ # checkpoint for finetuned model, use this parameter for testing
 
 # loader
 source_idx: '/YOUR/DATA/INDEX'
