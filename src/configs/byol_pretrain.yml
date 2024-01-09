@@ -1,0 +1,46 @@
+output_root: './streetbyol_output'
+log_dir: "./streetbyol_output"
+experiment_name: "exp0"
+
+# Data Params
+source_idx: '/YOUR/DATA/INDEX.csv'
+data_root: '/YOUR/DATA/ROOT/'
+dataset_name: "CityPulse"
+input_size: 224 # size of input image
+seq_len: 6 # drop the sequence whose length is shorter than seq_len during validation
+drop_rate: 0.02 # drop the images on which the percent of building pixels are less than drop_rate
+
+# Loader params
+num_workers: 8
+batch_size: 16
+eval_batch_size: 16
+s: 1 # range of color jitter
+
+# Model Params
+pretrained_weights: ~
+model_type: "vit_base"
+dino_patch_size: 16
+dino_feat_type: "feat"
+dino_dim: 100
+dropout: True
+mlp_hidden_size: 2048
+projection_size: 1024
+m: 0.9995 # weight for updating the target network
+
+# optim
+max_steps: 124400
+lr: 1e-4
+min_lr: 1e-7
+weight_decay: 1.5e-6
+warmup_steps: 3732
+
+# log
+scalar_log_freq: 10
+val_freq: 10000
+hist_freq: 100
+n_seq: 1
+
+hydra:
+  run:
+    dir: "."
+  output_subdir: ~
