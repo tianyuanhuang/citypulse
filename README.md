@@ -42,7 +42,7 @@ python ./src/SiamDINOv2_inference.py --data_idx /YOUR/DATA/INDEX.csv --checkpoin
 ### Pretrain
 In addition to directly loading the pre-trained model, we have also attempted to design and pre-train the *StreetBYOL* model and the *StreetMAE* model, based on a large amount of unlabeled data.
 
-In this section, we first reconstructed the unlabeled dataset. We assigned index to each image in all image sequences and utilized [STEGO](https://github.com/mhamilton723/STEGO) to segment the images, extracting the buildings and background separately. This also allowed us to calculate the proportion of pixels semantically identified as buildings in the entire image. We saved the original image, the building part of the original image, the background part of the original image, the corresponding positive sample of the original image, the building part of the positive sample, and the background part of the positive sample in six subdirectories under the data root, naming the images by their numbers. 
+In this section, we first reconstructed the unlabeled dataset. We assigned index to each image in all image sequences and utilized [STEGO](https://github.com/mhamilton723/STEGO) to segment the images, extracting the buildings and background separately. This also allowed us to calculate the proportion of pixels semantically identified as buildings in the entire image. We saved the original image, the building part of the original image, the background part of the original image, the corresponding positive sample of the original image, the building part of the positive sample, and the background part of the positive sample in six subdirectories under the data root, naming the images by their index. 
 
 ```
 dataset
