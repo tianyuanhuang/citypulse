@@ -19,7 +19,6 @@ import math
 from functools import partial
 
 import sys
-sys.path.append(r"/home/alber/workdir/ContrastGSV/src/stego")
 
 import torch
 import torch.nn as nn

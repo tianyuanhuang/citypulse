@@ -1,0 +1,51 @@
+output_root: './streetmae_output'
+log_dir: "./streetmae_output"
+experiment_name: "exp0"
+
+# Data Params
+# source_idx: '/YOUR/DATA/Index.csv'
+source_idx: '/home/tianyuah/data/index/train_150k_index.csv' # CSV for data index
+dataset_name: "CityPulse"
+input_size: 224
+seq_len: 6 # drop the sequences whose length is < seq_len, randomly choose seq_len images from every sequence as the training batch
+drop_rate: 0.02 # drop the images on which the percent of building pixels are less than drop_rate
+
+# Loader params
+num_workers: 8
+max_steps: 100000
+batch_size: 4 # 4 sequences, each has seq_len images
+eval_batch_size: 4
+train_detec_batch_size: 4
+
+# Model Params
+mask_ratio: 0.5
+time_embed_dim: 64 # the dimension of time encoding for encoder
+decoder_time_embed_dim: 32 # the dimension of time encoding for decoder
+img_size: 224
+patch_size: 16
+in_chans: 3
+embed_dim: 512
+depth: 12
+num_heads: 8
+decoder_embed_dim: 256
+decoder_depth: 4
+decoder_num_heads: 8
+mlp_ratio: 4
+
+# optim
+weight_decay: 0.05
+warmup_steps: 15000
+lr: 5e-3
+min_lr: 5e-6
+detector_lr: 5e-3
+
+# log
+scalar_log_freq: 10
+val_freq: 500
+hist_freq: 100
+n_seq: 1
+
+hydra:
+  run:
+    dir: "."
+  output_subdir: ~
