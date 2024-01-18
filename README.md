@@ -7,8 +7,8 @@
 Welcome to the official repository of **CityPulse**! CityPulse is a project aimed at capturing changes in the urban built environment and providing fine-grained assessments of urban development and changes through large-scale time-series of street view images. We have curated the largest annotated dataset of street view time-series to date and have fine-tuned a siamese change detection model on this dataset. The intention behind releasing the data, model, and code is to provide the research community with more comprehensive and extensive resources, facilitate broader downstream research on urbans, and advance sustainable development goals.
 
 
-## Data
-
+## Download CityPulse Dataset
+The full annotated dataset contains 9,137 images covering 757 locations with their corresponding street view time series. Each street view time series in the dataset is labeled as either 'change' or 'no change' at the image level, covering a time interval of 16 years across 4 metropolitans in the United States. Among them, 352 time series have been labeled with a total of 426 urban change points, while the remaining ones exhibit no substantial urban change. The street view pano ID, timestamp and coordinate can be downloaded [here](https://drive.google.com/file/d/1e9GiqGDZh8uAXP2yShaVEfbisEGOyPHz/).
 
 ## Models
 
@@ -75,8 +75,6 @@ We defined the positive sample of an image as the image taken at the same locati
 
 * For the *StreetBYOL* pre-training, please refer to the ``./src/byol_pretrain.py`` script and the corresponding configuration file ``./src/configs/byol_pretrain.yml``.
 * For the *StreetMAE* pre-training, please refer to the ``./src/mae_pretrain.py`` script and the corresponding configuration file ``./src/configs/mae_pretrain.yml``.
-
-## Licence
 
 
 ## Citing
