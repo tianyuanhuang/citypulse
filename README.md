@@ -1,6 +1,6 @@
 # CityPulse
 
-### [[Paper]](https://arxiv.org/abs/2401.01107) [[Citing]](https://github.com/tianyuanhuang/citypulse?tab=readme-ov-file#citing) [[Model Checkpoint]](https://huggingface.co/ZejiaW/CityPulse-DINOv2) [Project Page] (under construction) [[AAAI 2024]]()
+### [[Paper]](https://arxiv.org/abs/2401.01107) [[Citing]](https://github.com/tianyuanhuang/citypulse?tab=readme-ov-file#citing) [[Model Checkpoint]](https://huggingface.co/ZejiaW/CityPulse-DINOv2) [[Project Page]](https://tianyuanhuang.github.io/citypulse_web/) [[AAAI 2024]]()
 
 ![citypulse](figs/seattle.png)
 
